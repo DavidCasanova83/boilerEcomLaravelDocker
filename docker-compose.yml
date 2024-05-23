@@ -19,7 +19,7 @@ services:
             IGNITION_LOCAL_SITES_PATH: "${PWD}"
         volumes:
             - ".:/var/www/html"
-        networks:   
+        networks:
             - sail
         depends_on:
             - mysql

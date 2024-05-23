@@ -13,10 +13,13 @@ cp .env.example .env
 ```
 
 Installer les dépendances avec Composer :
+
 ```bash
 composer install
 ```
+
 Générer la clé de l'application :
+
 ```bash
 php artisan key:generate
 ```
@@ -26,24 +29,46 @@ php artisan key:generate
 Assure-toi que les fichiers de configuration Docker (comme docker-compose.yml) sont présents et correctement configurés.
 
 ```bash
-docker-compose up -d
+docker-compose build
+```
+
+```bash
+docker-compose up
+```
+### Faire la migration avec :
+```bash
+sail artisan migrate
 ```
 
 ### Accèder à l'application à l'adresse :
 
-**app Laravel**  => https://localhost
+**app Laravel** => http://localhost:8383
 
-**phpMyAdmin** => https://localhost:8081
+**phpMyAdmin** => http://localhost:8181
+
+
+### Helper Alias **Sail**
+#### ajouter l'alias
+pour bash
+```bash
+echo "alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'" >> ~/.bashrc
+```
+ou pour zsh
+```bash
+echo "alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'" >> ~/.zshrc
+```
+
+
 
 ## About This e-commerce project
 
 This is a Boiler plate for an e-commerce with Laravel and Docker
 
-- Laravel Sail
-- MySQL
-- PhpMyAdmin
-- Docker
-- Docker Compose
+-   Laravel Sail
+-   MySQL
+-   PhpMyAdmin
+-   Docker
+-   Docker Compose
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -61,19 +86,19 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+-   **[Vehikl](https://vehikl.com/)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[WebReinvent](https://webreinvent.com/)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+-   **[Cyber-Duck](https://cyber-duck.co.uk)**
+-   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+-   **[Jump24](https://jump24.co.uk)**
+-   **[Redberry](https://redberry.international/laravel/)**
+-   **[Active Logic](https://activelogic.com)**
+-   **[byte5](https://byte5.de)**
+-   **[OP.GG](https://op.gg)**
 
 ## Contributing
 
@@ -90,9 +115,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
 # ecom-anais
+
 # boilerEcomLaravelDocker
+
 # boilerEcomLaravelDocker
+
 # boilerEcomLaravelDocker
+
 # boilerEcomLaravelDocker
+
 # boilerEcomLaravelDocker
